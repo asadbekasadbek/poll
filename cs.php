@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set("Asia/Tashkent");
 $week = date('w');
-if ($week != 6 && $week != 0) {
+if ($week == 5) {
     $url = "https://api.telegram.org/bot6105706009:AAGNtsgnYVN0KM9PwxWGpVY6XsCjwCt2tM8/sendPoll";
 
     $curl = curl_init($url);
