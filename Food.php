@@ -343,18 +343,20 @@ if ($week != 6 && $week != 0) {
     ];
 
     $option = 1;
-    $date = date('d');
+    $date = date('j');
+    echo $date;
     if ($date > 17) {
         $option = $date - 17;
     } else {
         $option = $date;
     }
-    echo $option;
+
+
     $data = json_encode($all[$option]);
 
     curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 
-//for debug only!
+
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
